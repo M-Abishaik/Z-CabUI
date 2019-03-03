@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Driver Profile</title>
+	<link  href="css/driver.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body onload="driverviewprofile()" id="driver">
+
+	<header>
+		<a href="index.html"><img src="img/logouber2.png" alt="Taxi logo" class="logo"></a>
+	</header>
+	
+	<div class="vertical-menu">
+  		<a class="drivernav" onclick="driverviewprofile()">Profile</a>
+        <a class="drivernav" onclick=" window.open('mytrips_driver.html', '_self'); return false;">My Trips</a>
+        <a class="logout" href="index.html">Logout</a>
+	</div> 
+ 	<div class="container3 driver">
+
+        <form id="driverprofile">
+        	<img class="my-profile-icon" src="img/4.png">
+        	<h2 class="prof-title">Driver Name <span>123456789</span></h2>
+            <label for="email">Email ID</label>
+            <input id="email" type="email" placeholder="Username123@gmail.com" name="email" readonly="readonly">
+            <label for="address">Address</label>
+            <textarea id="address" placeholder="123, Bank Street, Chennai, India" readonly="readonly"></textarea>            
+            <label for="zipcode">Zip Code</label>
+            <input type="text" id="zipcode">
+            <label for="psw"><b>Password</b></label>
+            <input type="password" id="riderPassword" name="password" required> 
+            <br> <br>
+            <br> <br>
+            <button class="bottomLogin button button-accent"type="button" onclick="window.location.href='#save-modal'" >Save</button>
+            <div id="save-modal" class="modalDialog">
+                <div>
+                    <a href="#close" title="Close" class="close">x</a>
+                    <h2>Saved successfully.</h2><br>
+                </div>
+            </div>
+            <img class= "my-profile-img" src="img/ride_1.jpg">
+        </form>  
+        
+	</div>
+
+</body>
+
+<script src="js/driver.js"></script>
+</html>

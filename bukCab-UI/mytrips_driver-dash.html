@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Driver Profile</title>
+	<link  href="css/driver.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body onload="upcoming()">
+
+	<header>
+		<a href="index.html"><img src="img/logouber2.png" alt="Taxi logo" class="logo"></a>
+	</header>
+	<div class="vertical-menu">
+        <a class="drivernav" onclick="window.open('driver_dashboard.html', '_self');">Dashboard</a>
+        <a class="drivernav" onclick="window.open('driver_dashboard.html#driverprofile', '_self');">Profile</a> 
+        <a class="drivernav">My Trips</button>
+        <a class="logout" href="index.html">Logout</a>
+    </div> 
+ 	<div class="container3 driver">
+ 			<div class="filter-drivertrips" style="margin-top: -2em;">
+                <label>Filter by : </label>
+
+                <a class="button button-accent upcoming" onclick="upcoming()">Upcoming</a>
+                <a class="button button-accent completed" onclick="completed()">Completed</a>
+                <a class="button button-accent cancelled" onclick="cancelled()">Cancelled</a>
+ 			</div>
+
+ 			<div id="drivertrips">
+                <div class="row">
+                    
+                    <div class="column" id="upcoming">
+                        <div class="upcoming-available">
+                        <button class="collapsible"><h2 id="datetime">15 February 2019, 7.40pm</h2>
+                        <h2 id="rs">Rs. 250 Fares might change</h2>
+                        <h4 id="place">Chennai</h4>
+                        <h4 id="cash">Wallet</h4></button>
+                        <div class="content">
+                            <h3 id="with">Your trip with John</h3>
+                            <h3 id="fromto">From XYZ to ABC</h3>
+                            <button class="button button-accent update" onclick="window.location.href='#update-modal'">Update</button>
+                            <div id="update-modal" class="modalDialog">
+                                <div>
+                                    <a href="#close" title="Close" class="close">x</a>
+                                    <h2>Updated successfully.</h2>
+                                </div>
+                            </div>
+                            <button class="button button-accent cancel" onclick="window.location.href='#cancel-modal'">Cancel</button>
+                            <div id="cancel-modal" class="modalDialog">
+                                <div>
+                                    <a href="#close" title="Close" class="close">x</a>
+                                    <h2>Cancelled successfully.</h2>
+                                    <a href="rider_profile.html" style="color:#00ff6c">Book again?</a>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="upcoming-nil">
+                            <button class="collapsible"><h2 id="msg1"><i class="fas fa-envelope"></i>   You don't have any current rides</h2>
+                            </button>
+                        </div>
+                    </div>  
+                    <div id="completed">
+                    <div class="column">
+                        <div class="completed-available">
+                        <button class="collapsible"><h2 id="datetime">13 February 2019, 6.02pm</h2>
+                        <h2 id="rs">Rs.300</h2>
+                        <h4 id="place">Chennai</h4>
+                        <h4 id="cash">Cash</h4></button>
+                        <div class="content">
+                            <h3 id="with">Your trip with Mike</h3>
+                            <h3 id="fromto">From XYZ to ABC</h3>
+                            <form id="user-rating-form">
+                            <span class="user-rating">
+                            <input type="radio" name="rating" value="5"><span class="star"></span>
+
+                                <input type="radio" name="rating" value="4"><span class="star"></span>
+
+                                <input type="radio" name="rating" value="3"><span class="star"></span>
+
+                                <input type="radio" name="rating" value="2"><span class="star"></span>
+
+                                <input type="radio" name="rating" value="1"><span class="star"></span>
+                            </span>
+                            <button style="margin-bottom: 1em;" type="submit" class="button button-accent cancel">Rate</button>
+                            </form>
+                        </div>
+                    </div>
+                    </div>  
+                    <div class="column" id="completed">
+                        <div class="completed-available">
+                        <button class="collapsible"><h2 id="datetime">09 February 2019, 5.15pm</h2>
+                        <h2 id="rs">Rs.150</h2>
+                        <h4 id="place">Chennai</h4>
+                        <h4 id="cash">Wallet</h4></button>
+                        <div class="content">
+                            <h3 id="with">Your trip with Will</h3>
+                            <h3 id="fromto">From XYZ to ABC</h3>
+                            <form id="user-rating-form">
+                            <span class="user-rating">
+                            <input type="radio" name="rating" value="5"><span class="star"></span>
+
+                                <input type="radio" name="rating" value="4"><span class="star"></span>
+
+                                <input type="radio" name="rating" value="3"><span class="star"></span>
+
+                                <input type="radio" name="rating" value="2"><span class="star"></span>
+
+                                <input type="radio" name="rating" value="1"><span class="star"></span>
+                            </span>
+                            <button style="margin-bottom: 1em;" type="submit" class="button button-accent cancel">Rate</button>
+                            </form>
+                        </div>
+                    </div> 
+                    <div class="completed-nil">
+                        <button class="collapsible"><h2 id="msg1"><i class="fas fa-envelope"></i>   You don't have any current rides</h2>
+                        </button>
+                    </div>
+                    </div>
+                </div>
+                    <div class="column" id="cancelled">
+                        <button class="collapsible"><h2 id="datetime">09 February 2019, 5.00pm</h2>
+                        <h2 id="rs">NIL</h2>
+                        <h4 id="place">Chennai</h4>
+                        <h4 id="cash">-</h4></button>
+                        <div class="content">
+                            <h3 id="with">Your trip with John</h3>
+                            <h3 id="fromto">From XYZ to ABC</h3>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+    </div>
+
+</body>
+
+    <script src="js/driver.js"></script>
+</html>
+
